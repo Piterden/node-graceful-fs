@@ -60,8 +60,6 @@ function patch (fs) {
   fs.gracefulify = patch
   fs.FileReadStream = ReadStream;  // Legacy name.
   fs.FileWriteStream = WriteStream;  // Legacy name.
-  fs.ReadStream = ReadStream;
-  fs.WriteStream = WriteStream;
   fs.existsSync = existsSync;
   fs.createReadStream = createReadStream
   fs.createWriteStream = createWriteStream
