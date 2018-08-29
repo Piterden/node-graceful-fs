@@ -43,5 +43,8 @@
     "graceful-fs.js",
     "legacy-streams.js",
     "polyfills.js"
-  ]
+  ],
+  "dependencies": {
+    "fs-exists-sync": "^0.1.0"
+  }
 }

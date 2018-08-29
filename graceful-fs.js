@@ -1,4 +1,5 @@
 var fs = require('fs')
+var existsSync = require('fs-exists-sync')
 var polyfills = require('./polyfills.js')
 var legacy = require('./legacy-streams.js')
 var queue = []
@@ -59,6 +60,9 @@ function patch (fs) {
   fs.gracefulify = patch
   fs.FileReadStream = ReadStream;  // Legacy name.
   fs.FileWriteStream = WriteStream;  // Legacy name.
+  fs.ReadStream = ReadStream;
+  fs.WriteStream = WriteStream;
+  fs.existsSync = existsSync;
   fs.createReadStream = createReadStream
   fs.createWriteStream = createWriteStream
   var fs$readFile = fs.readFile
